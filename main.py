@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from mangum import Mangum
 
 app = FastAPI()
 
@@ -22,7 +21,3 @@ def create_user(user: User):
     return user
 
 
-
-
-
-handler = Mangum(app)
